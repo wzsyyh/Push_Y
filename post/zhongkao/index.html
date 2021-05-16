@@ -1,0 +1,856 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>中考复习笔记 | Push_Y&#39;s blog</title>
+
+<link rel="shortcut icon" href="https://www.wzsyyh.ml/favicon.ico?v=1621152968525">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.wzsyyh.ml/styles/main.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"> -->
+
+<style>
+    hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script> -->
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <style>
+    /* 导航栏样式 */
+    .navbar {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-brand {
+        display: inline-block;
+        padding-top: 0.3125rem;
+        padding-bottom: 0.3125rem;
+        margin-right: 1rem;
+        font-size: 1.25rem;
+        line-height: inherit;
+        white-space: nowrap;
+    }
+
+    .navbar-brand:hover,
+    .navbar-brand:focus {
+        text-decoration: none;
+    }
+
+    .navbar-nav {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+    }
+
+    .navbar-collapse {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .navbar-toggler {
+        padding: 0.25rem 0.75rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+    }
+
+    .navbar-toggler:hover,
+    .navbar-toggler:focus {
+        text-decoration: none;
+    }
+
+    @media (min-width: 992px) {
+        .navbar-expand-lg {
+            -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+        }
+
+        .navbar-expand-lg .navbar-nav {
+            -ms-flex-direction: row;
+            flex-direction: row;
+        }
+
+        .navbar-expand-lg .navbar-collapse {
+            display: -ms-flexbox !important;
+            display: flex !important;
+            -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+        }
+
+        .navbar-expand-lg .navbar-toggler {
+            display: none;
+        }
+    }
+
+    @media (max-width: 991px) {
+        #navbarSupportedContent {
+            display: none;
+        }
+    }
+</style>
+<nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            Push_Y&#39;s blog
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+            <div class="nav-item">
+                
+                <a href="/" class="menu gt-a-link">
+                    首页
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/archives" class="menu gt-a-link">
+                    归档
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/post/about" class="menu gt-a-link">
+                    关于
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/post/friends" class="menu gt-a-link">
+                    友链
+                </a>
+                
+            </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1621152968525"
+                action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = function () {
+        var element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    }
+</script>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    中考复习笔记
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-05-15 ·
+                    </time>
+                    
+                        <a href="https://www.wzsyyh.ml/tag/whk/" class="post-tags">
+                            # 文化课
+                        </a>
+                    
+                        <a href="https://www.wzsyyh.ml/tag/zaxiang/" class="post-tags">
+                            # 杂项
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <h2 id="写在前面">写在前面</h2>
+<p>开贴日期：2021.5.15 Day -32<br>
+由于政策改变（提前招学生还得中考），加上whk有很多漏洞，最后一个月还是需要对于中考做一个补漏。<br>
+不同于其他同学按日期来更博客，这里 <a href="https://www.luogu.com.cn/user/135485">Push_Y</a> 选择按学科来记录。</p>
+<h2 id="社会">社会</h2>
+<h3 id="有关农业的几次事件">有关农业的几次事件</h3>
+<ul>
+<li>土地革命（国共十年对峙时期）</li>
+<li>土地政策（抗日战争时期 1941）
+<ul>
+<li>内容：实行地主减租减息，农民交租交息的土地政策。</li>
+<li>意义：减轻了地主的封建剥削，改善了农民的物质生活，提高了农民抗日和生产的积极性，有利于联合地主一致抗日。</li>
+</ul>
+</li>
+<li>土地改革（解放战争时期 1947）
+<ul>
+<li>中国共产党召开全国土地会议，决定在解放区进行土地改革，制定了《中国土地法大纲》。</li>
+<li>意义：
+<ol>
+<li>土改的完成，彻底废除了中国延续两千多年的<strong>封建土地所有制</strong>，消灭了地主阶级。</li>
+<li>农民翻了身，成为土地的主人。</li>
+<li>这使得人民政权更加巩固，也大大<strong>解放了农村的生产力</strong>。农村生产获得迅速发展，为国家的工业化建设准备了条件，<s>也支持了抗美援朝</s>。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>三大改造中的农业改造——农业生产合作社（巩固新生政权）
+<ul>
+<li>国家对农业进行社会主义改造，引导农民参加<strong>农业生产合作社</strong>，走集体化、共同富裕的道路。</li>
+<li>扯：
+<blockquote>
+<p><strong>三大改造</strong>（中国社会主义改造）：农业、手工业、资本主义工商业<br>
+实现了<strong>生产资料私有制</strong>向<strong>社会主义公有制</strong>的转变<br>
+农业合作化运动，推动了手工业的社会主义改造<br>
+一些名词：农业合作化运动、公私合营、赎买赎买</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>家庭联产承包责任制
+<ul>
+<li>开始：
+<ul>
+<li>时间：1978年</li>
+<li>示例：小岗村</li>
+<li>扯：
+<blockquote>
+<p>改革开放：<br>
+改革：小岗村<br>
+开放：沿海地区<br>
+开放的推进：经济特区-&gt;沿海开放城市-&gt;沿海经济开放区-&gt;内地 <strong>形成全方位、多层次、宽领域的对外开放格局</strong></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>意义：激发了农民的<strong>劳动热情</strong>，带来了农村<strong>生产力的大解放</strong>，<strong>农业生产和农民收入</strong>均有很大提高。</li>
+</ul>
+</li>
+</ul>
+<h3 id="中国古代史">中国古代史</h3>
+<ul>
+<li>朝代
+<ul>
+<li>秦：<strong>中国历史上第一个统一的多民族的封建国家</strong>
+<ul>
+<li>统一货币，统一度、量、衡：巩固秦朝统一</li>
+<li>统一文字：利于文化交流，统一的文字成为维系中华文明的重要纽带</li>
+<li>焚书坑儒：加强了思想控制，对文化造成了重大损失</li>
+</ul>
+</li>
+<li>汉
+<ul>
+<li>推恩令
+<ul>
+<li>措施：允许诸侯王将自己的封地分给其他子弟</li>
+<li>影响：削弱了诸侯王的势力</li>
+</ul>
+</li>
+<li>刺史制度（监督州部）、司隶校尉（监督朝廷、都城）
+<ul>
+<li>加强中央对官员的监督</li>
+</ul>
+</li>
+<li>统一造货币、经营盐铁：增加中央收入</li>
+<li>儒学：兴办太学，儒学居于正统地位</li>
+<li>西域都护府：西域正式归属中央</li>
+</ul>
+</li>
+<li>北魏
+<ul>
+<li>孝文帝改革~~（败家）~~
+<ul>
+<li>迁都洛阳：接受中原地区先进文化</li>
+<li>改革鲜卑旧俗，统一用汉语，规定穿戴汉族服饰，改鲜卑族姓氏为汉族姓氏，学习汉族礼法</li>
+</ul>
+<blockquote>
+<p>适应了社会经济的发展，大大加快了北方民族交融的步伐</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>隋唐
+<ul>
+<li>贞观之治</li>
+<li>制度
+<ul>
+<li>沿袭完善<strong>三省六部制</strong>：加强了中央集权</li>
+<li>完善科举制度</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>宋
+<ul>
+<li>崇文抑武，解除统军大将的兵权</li>
+<li>加强了中央集权，但削弱了军队战斗力</li>
+</ul>
+</li>
+<li>元
+<ul>
+<li>宣政院：负责藏族地区的行政</li>
+<li>澎湖巡检司：历史上中央政府首次在台湾地区正式建立的行政机构</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>经济重心南移
+<ul>
+<li>南宋时完成了经济重心南移</li>
+</ul>
+</li>
+<li>四大发明
+<blockquote>
+<p>造纸术：东汉蔡伦改进<br>
+印刷术：隋唐雕版印刷术，北宋毕昇发明活字印刷术<br>
+指南针：北宋开始使用，后由阿拉伯人传入欧洲<br>
+火药：唐朝开始用于军事，宋元时期被广泛用于战争，后传入阿拉伯地区和欧洲，推动欧洲社会变革</p>
+</blockquote>
+</li>
+<li>医学、农学
+<blockquote>
+<p>东汉张仲景《伤寒杂病论》<br>
+东汉华佗 全身麻醉药剂<br>
+明朝李时珍《本草纲目》<br>
+北朝贾思勰《齐民要术》<br>
+明朝徐光启《农政全书》</p>
+</blockquote>
+</li>
+<li>对外交流
+<blockquote>
+<p>汉朝 开辟丝绸之路<br>
+唐朝 玄奘到达天竺带回佛经，鉴真六次东渡日本<br>
+元朝 《马可·波罗行纪》<br>
+明朝 郑和下西洋</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="中国近代史">中国近代史</h3>
+<ul>
+<li>四次大规模侵华战争
+<ul>
+<li>鸦片战争（1840~1842）
+<ul>
+<li>香港岛 《南京条约》 开始从封建社会变为<strong>半殖民地半封建社会</strong>（下文记作Ban）</li>
+</ul>
+</li>
+<li>第二次鸦片战争（1856~1860）
+<ul>
+<li>攻陷北京 圆明园 《天津条约》《北京条约》 Ban进一步加深</li>
+</ul>
+</li>
+<li>中日甲午战争（1894~1895）
+<ul>
+<li>黄海海战 《马关条约》大大加深了Ban</li>
+</ul>
+</li>
+<li>八国联军侵华战争（1900~1901）
+<ul>
+<li>北国联军攻占北京 《辛丑条约》完全沦为Ban</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>条约<br>
+《南京条约》（第一个不平等条约）：英国 香港岛、五处通商口岸<br>
+《天津条约》：俄美英法 10处通商口岸<br>
+《北京条约》：英法 九龙司<br>
+《马关条约》：日本 台湾全岛等岛 通商口岸设立工厂<br>
+《辛丑条约》：英美俄日法德意奥比荷西</p>
+</blockquote>
+</li>
+<li>洋务运动
+<ul>
+<li>二鸦后</li>
+<li>代表：曾国藩、李鸿章……</li>
+<li>过程：引进西方先进技术，派遣留学生</li>
+<li>影响：由于是维护和巩固清政府，没有使中国富强</li>
+</ul>
+</li>
+<li>戊戌变法
+<ul>
+<li>代表：康有为、梁启超</li>
+<li>过程：公车上书拉开了序幕</li>
+<li>影响：虽然失败了，在思想文化方面产生了广泛而持久的影响</li>
+</ul>
+</li>
+<li>中国同盟会
+<ul>
+<li>1905 日本东京 孙中山</li>
+<li>性质：<strong>第一个全国规模的、统一的资产阶级革命政党</strong></li>
+<li>指导思想：三民主义（民族、民权、民生）</li>
+<li>革命纲领：驱除鞑虏、恢复中华、创立民国、平均地权</li>
+</ul>
+</li>
+<li>辛亥革命
+<ul>
+<li>武昌首义（标志）
+<ul>
+<li>四川保路运动（导火线）</li>
+<li>1911.10.9晚</li>
+<li>1911.10.11 起义军成立湖北军政府</li>
+</ul>
+</li>
+<li>代表：孙中山、徐锡麟、秋瑾、黄兴</li>
+<li>性质：资产阶级革命</li>
+<li><strong>意义</strong>：推翻了清朝的反动统治，宣告了延续两千多年的君主专制制度的结束。它开启了完全意义上的近代民族民主革命，极大地推动了中华民族的思想解放，打开了中国进步潮流的闸门。</li>
+<li>不足处
+<ol>
+<li>没有改变中国社会性质，仍是Ban</li>
+<li>军阀割据混战，政局动荡不安，人民生活困苦不堪</li>
+<li>没有彻底解放人们的思想</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>中华民国成立
+<ul>
+<li>1912.1.1 南京</li>
+<li>《中华民国临时约法》</li>
+<li>清帝（溥仪）退位：1912.2.12</li>
+<li>袁世凯1915复辟帝制但很快取消</li>
+</ul>
+</li>
+<li>新文化运动
+<ul>
+<li>背景：新生的中华民国很快陷入了政治混乱的局面。一部分先进知识分子认识到，仅进行政治制度的革新不足以救中国，必须启发过敏新的伦理道德意识，培养国民的独立人格，彻底荡涤封建旧文化的毒害，进行一场思想文化领域的革新运动。</li>
+<li>标志：陈独秀在上海创办《青年杂志》（后改名《新青年》）</li>
+<li>旗帜：“民主”、“科学”</li>
+<li>内容：四个提倡、反对
+<blockquote>
+<p>提倡民主科学，反对专制和迷信盲从（核心）<br>
+提倡新文学，反对旧文学（文化革命）<br>
+提倡个性解放，反对封建礼教<br>
+提倡新道德，反对旧道德（思想革命）</p>
+</blockquote>
+</li>
+<li>代表
+<blockquote>
+<p>陈独秀：《新青年》<br>
+李大钊<br>
+胡适：文学革命，用白话文代替文言文<br>
+鲁迅：《狂人日记》<br>
+蔡元培（北大校长）：思想自由，兼容并包</p>
+</blockquote>
+</li>
+<li>性质：是一次伟大的<strong>思想启蒙</strong>运动</li>
+<li>意义：
+<ol>
+<li>思想文化领域发生的这场运动让军阀混战中的中国响起了思想启蒙的运动</li>
+<li>使人们的思想，特别是青年学生的思想获得极大解放，从而更加广泛而深刻的影响了整个社会</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>五四运动
+<ul>
+<li>导火线：巴黎和会上中国外交遭受挫折</li>
+<li>时间：1919.5.4~</li>
+<li>中心、运动主力
+<ul>
+<li>第一阶段：北京 青年学生</li>
+<li>第二阶段：上海 工人阶级</li>
+</ul>
+</li>
+<li>口号：“还我青岛”……</li>
+<li>初步胜利的表现：
+<ol>
+<li>北洋政府被迫释放被捕学生</li>
+<li>北洋政府罢免曹汝霖、章宗祥、陆宗舆的职务</li>
+<li>中国外交做出了拒绝在《凡尔赛条约》上签字的决定</li>
+</ol>
+</li>
+<li>意义：
+<ol>
+<li>是一次彻底地反对帝国主义和封建主义的爱国革命运动（性质）</li>
+<li>是中国新民主主义革命的开端</li>
+<li><strong>中国的工人阶级开始以独立的姿态登上政治舞台</strong></li>
+<li>马克思主义在中国得到广泛传播</li>
+<li>人们的思想获得极大解放，开始用新的眼光看中国、看世界</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>中国共产党成立：
+<ul>
+<li>三大条件
+<blockquote>
+<p>阶级基础：工人阶级的壮大，工人运动的发展<br>
+思想基础：马克思主义的广泛传播<br>
+组织基础：共产主义早期小组的建立</p>
+</blockquote>
+</li>
+<li>中共一大：
+<ul>
+<li>1921.7.23 上海-&gt;嘉兴南湖游船</li>
+<li>内容：通过了中共历史上第一个党纲，确定了党的名称为中国共产党，党的奋斗目标是推翻资产阶级政权，建立无产阶级专政，实现共产主义。</li>
+<li>意义：标志着中国共产党的诞生</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>第一次国共合作：
+<ul>
+<li>标志：国民党“一大”的召开</li>
+<li>政治基础：新三民主义</li>
+<li>成果：黄埔军校、国民革命军、北伐</li>
+<li>破裂：蒋介石等人发动“四一二反革命政变”</li>
+</ul>
+</li>
+<li>北伐战争
+<ul>
+<li>1926~1928</li>
+<li>目的：打倒列强，推翻北洋军阀统治，统一全国</li>
+<li>过程：贺胜桥、叶挺独立团、张学良改易旗帜</li>
+</ul>
+</li>
+<li>南昌起义
+<ul>
+<li>意义：打响了武装反抗国民党反动派的第一枪，是中共创建军队、独立领导武装斗争的开始</li>
+</ul>
+</li>
+<li>八七会议（汉口会议）
+<ul>
+<li>内容：确立了开展土地革命和武装反抗国民党反动派的总方针，毛泽东提出了“<strong>政权是由枪杆子中取得的</strong>”的重要论断</li>
+</ul>
+</li>
+<li>秋收起义
+<ul>
+<li>领导人：毛泽东</li>
+</ul>
+</li>
+<li>革命根据地
+<ul>
+<li>井冈山革命根据地：毛泽东建立了第一个农村革命根据地</li>
+<li>思想：<strong>工农武装格局思想</strong>（提出者：毛泽东）</li>
+<li>有<strong>中国特色的革命新道路</strong>的内容：进行土地革命，在农村建立革命根据地，走农村包围城市、武装夺取政权的道路</li>
+</ul>
+</li>
+<li>长征
+<ul>
+<li>1934.10~1936.10</li>
+<li>经过：强渡乌江、遵义会议、进入甘肃、吴起镇会师、甘肃会师</li>
+<li>遵义会议
+<ul>
+<li>1935.1</li>
+<li>解决军事、组织问题</li>
+<li>意义：三个开始、三个挽救、一个转折
+<blockquote>
+<p>遵义会议开始确立了毛泽东在红军和党中央的领导地位，开始确立了以毛泽东为主要代表的马克思主义的正确路线在党中央的领导地位，开始形成了以毛泽东为核心的党的第一代中央领导集体，在极其危机的时刻，挽救了党，挽救了红军，挽救了革命，成为中国共产党历史上一个生死攸关的转折点。这次会议是中国共产党从幼年走向成熟的标志。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>九一八事变
+<ul>
+<li>1931.9.18夜</li>
+<li>中国抗日战争的起点，中国人不屈不挠的局部抗战揭开了世界反法西斯战争的序幕</li>
+</ul>
+</li>
+<li>七七事变（卢沟桥事变）
+<ul>
+<li>1937.7.7</li>
+<li>中国全面抗战由此开始</li>
+</ul>
+</li>
+<li>日本侵华史实
+<ol>
+<li>中日甲午战争</li>
+<li>伪满洲国</li>
+<li>九一八事变</li>
+</ol>
+</li>
+<li>中国全民抗战的史实
+<ul>
+<li>抗日英雄、著名战役、国共合作战略态势</li>
+</ul>
+</li>
+<li>西安事变
+<ul>
+<li>1936.12.12 张学良、杨虎城</li>
+<li>和平解决的意义
+<ol>
+<li>解开了国共两党由内战到联合抗日的序幕</li>
+<li>成为扭转时局的关键</li>
+<li>国共十年内战基本结束</li>
+<li>以第二次国共合作为基础的抗日民族统一战线初步形成</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="科学">科学</h2>
+<h3 id="心脏">心脏</h3>
+<ul>
+<li>图片右边是“左”</li>
+<li>上面是心房、下面是心室
+<blockquote>
+<p>体循环：左心室-&gt;主动脉-&gt;全身各处毛细血管-&gt;上下腔静脉-&gt;右心房<br>
+肺循环：左心房&lt;-肺静脉&lt;-肺部毛细血管&lt;-肺动脉&lt;-右心室</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="冲程">冲程</h3>
+<ul>
+<li>吸气、压缩、做功、排气</li>
+<li><a href="/post/chongcheng">冲程示意图</a></li>
+</ul>
+<h3 id="细菌-真菌-蕨类-苔藓类-藻类">细菌、真菌、蕨类、苔藓类、藻类</h3>
+<ul>
+<li>细菌：细胞膜、细胞质、拟核</li>
+<li>真菌：细胞膜、细胞质、细胞核，细胞膜外有细胞壁，细胞质内有液泡</li>
+<li>蕨类有根、茎、叶分化；苔藓类有茎、叶分化；藻类植物没有根、茎、叶分化</li>
+</ul>
+<h3 id="免疫">免疫</h3>
+<ul>
+<li>非特异性免疫
+<ul>
+<li>是机体对体内外异物都可以发生的免疫反应，不针对某种特定的病原体，对<strong>多种病原体</strong>都有一定的防御作用。</li>
+</ul>
+</li>
+<li>特异性免疫
+<ul>
+<li>人工免疫
+<ul>
+<li><strong>疫苗或抗原</strong>接种到人体，使人体产生相应的抗体从而获得免疫的方法。</li>
+</ul>
+</li>
+<li>计划免疫
+<ul>
+<li>对易感人群进行预防接种。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="营养素">营养素</h3>
+<ul>
+<li>消化并吸收：糖类、脂肪、蛋白质</li>
+<li>不用消化直接吸收：水、无机盐、维生素</li>
+<li>不能吸收：膳食纤维</li>
+</ul>
+<h3 id="花-种子">花、种子</h3>
+<ul>
+<li>花
+<ul>
+<li>结构：花托、花萼、花冠、雄蕊（花药、花丝）、雌蕊（柱头、花柱、子房）</li>
+</ul>
+</li>
+</ul>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">子</mi><mi mathvariant="normal">房</mi><mrow><mrow><mo fence="true">{</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi mathvariant="normal">子</mi><mi mathvariant="normal">房</mi><mi mathvariant="normal">壁</mi><mo>−</mo><mo>−</mo><mo>−</mo><mo>−</mo><mo>−</mo><mo>−</mo><mo>&gt;</mo><mi mathvariant="normal">果</mi><mi mathvariant="normal">皮</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi mathvariant="normal">胚</mi><mi mathvariant="normal">珠</mi><mrow><mrow><mo fence="true">{</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi mathvariant="normal">珠</mi><mi mathvariant="normal">被</mi><mo>−</mo><mo>&gt;</mo><mi mathvariant="normal">种</mi><mi mathvariant="normal">皮</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi mathvariant="normal">受</mi><mi mathvariant="normal">精</mi><mi mathvariant="normal">卵</mi><mo>−</mo><mo>&gt;</mo><mi mathvariant="normal">胚</mi></mrow></mstyle></mtd></mtr></mtable></mrow><mo fence="true">}</mo></mrow><mi mathvariant="normal">种</mi><mi mathvariant="normal">子</mi></mrow></mstyle></mtd></mtr></mtable></mrow><mo fence="true">}</mo></mrow><mi mathvariant="normal">果</mi><mi mathvariant="normal">实</mi></mrow><annotation encoding="application/x-tex">子房
+\left.
+\begin{cases}
+子房壁------&gt;果皮 \\
+胚珠
+\left.
+\begin{cases}
+珠被-&gt;种皮 \\
+受精卵-&gt;胚
+\end{cases}
+\right\}种子
+\end{cases}
+\right\}
+果实
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:4.44003em;vertical-align:-1.970015em;"></span><span class="mord cjk_fallback">子</span><span class="mord cjk_fallback">房</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen nulldelimiter"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.35002em;"><span style="top:-2.19999em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎩</span></span></span><span style="top:-2.19999em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎪</span></span></span><span style="top:-3.1500100000000004em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎨</span></span></span><span style="top:-4.30001em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎪</span></span></span><span style="top:-4.60002em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎧</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.8500199999999998em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.470015em;"><span style="top:-5.212015000000001em;"><span class="pstrut" style="height:3.75em;"></span><span class="mord"><span class="mord cjk_fallback">子</span><span class="mord cjk_fallback">房</span><span class="mord cjk_fallback">壁</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">−</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord cjk_fallback">果</span><span class="mord cjk_fallback">皮</span></span></span><span style="top:-3.0300149999999997em;"><span class="pstrut" style="height:3.75em;"></span><span class="mord"><span class="mord cjk_fallback">胚</span><span class="mord cjk_fallback">珠</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen nulldelimiter"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">{</span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord cjk_fallback">珠</span><span class="mord cjk_fallback">被</span><span class="mord">−</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord cjk_fallback">种</span><span class="mord cjk_fallback">皮</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord cjk_fallback">受</span><span class="mord cjk_fallback">精</span><span class="mord cjk_fallback">卵</span><span class="mord">−</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord cjk_fallback">胚</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size4">}</span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">种</span><span class="mord cjk_fallback">子</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.970015em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.35002em;"><span style="top:-2.19999em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎭</span></span></span><span style="top:-2.19999em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎪</span></span></span><span style="top:-3.1500100000000004em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎬</span></span></span><span style="top:-4.30001em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎪</span></span></span><span style="top:-4.60002em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎫</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.8500199999999998em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">果</span><span class="mord cjk_fallback">实</span></span></span></span></span></p>
+<ul>
+<li>种子
+<ul>
+<li>由<strong>种皮、胚</strong>构成
+<blockquote>
+<p>双子叶植物的 胚：胚根、胚轴、胚芽、子叶<br>
+单子叶植物的 胚：胚根、胚轴、胚芽、胚乳</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo fence="true">{</mo><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi mathvariant="normal">胚</mi><mi mathvariant="normal">根</mi><mo>−</mo><mo>&gt;</mo><mi mathvariant="normal">根</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi mathvariant="normal">胚</mi><mi mathvariant="normal">轴</mi><mo>−</mo><mo>&gt;</mo><mi mathvariant="normal">连</mi><mi mathvariant="normal">接</mi><mi mathvariant="normal">根</mi><mi mathvariant="normal">、</mi><mi mathvariant="normal">茎</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi mathvariant="normal">胚</mi><mi mathvariant="normal">芽</mi><mo>−</mo><mo>&gt;</mo><mi mathvariant="normal">茎</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">子</mi><mi mathvariant="normal">叶</mi></mrow></mstyle></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">\begin{cases}
+胚根-&gt;根 \\
+胚轴-&gt;连接根、茎 \\
+胚芽-&gt;茎的子叶
+\end{cases}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:4.32em;vertical-align:-1.9099999999999997em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.35002em;"><span style="top:-2.19999em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎩</span></span></span><span style="top:-2.19999em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎪</span></span></span><span style="top:-3.1500100000000004em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎨</span></span></span><span style="top:-4.30001em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎪</span></span></span><span style="top:-4.60002em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎧</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.8500199999999998em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.41em;"><span style="top:-4.41em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord cjk_fallback">胚</span><span class="mord cjk_fallback">根</span><span class="mord">−</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord cjk_fallback">根</span></span></span><span style="top:-2.97em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord cjk_fallback">胚</span><span class="mord cjk_fallback">轴</span><span class="mord">−</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord cjk_fallback">连</span><span class="mord cjk_fallback">接</span><span class="mord cjk_fallback">根</span><span class="mord cjk_fallback">、</span><span class="mord cjk_fallback">茎</span></span></span><span style="top:-1.5300000000000002em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord cjk_fallback">胚</span><span class="mord cjk_fallback">芽</span><span class="mord">−</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord cjk_fallback">茎</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">子</span><span class="mord cjk_fallback">叶</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.9099999999999997em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<h3 id="生殖">生殖</h3>
+<ul>
+<li>有性生殖
+<ul>
+<li>卵生、胎生、卵胎生</li>
+</ul>
+</li>
+<li>无性生殖
+<ul>
+<li>分裂生殖、出芽生殖、克隆</li>
+</ul>
+</li>
+</ul>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://www.wzsyyh.ml/post/blog/" class="post-title gt-a-link">
+                    博客迁移
+                </a>
+            </div>
+        
+
+        
+
+        
+            
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+<script>
+    // md5.min.js
+    !function(n){
+        "use strict";
+        function d(n,t){var r=(65535&n)+(65535&t);return(n>>16)+(t>>16)+(r>>16)<<16|65535&r}
+        function f(n,t,r,e,o,u){return d((c=d(d(t,n),d(e,u)))<<(f=o)|c>>>32-f,r);var c,f}
+        function l(n,t,r,e,o,u,c){return f(t&r|~t&e,n,t,o,u,c)}
+        function v(n,t,r,e,o,u,c){return f(t&e|r&~e,n,t,o,u,c)}
+        function g(n,t,r,e,o,u,c){return f(t^r^e,n,t,o,u,c)}
+        function m(n,t,r,e,o,u,c){return f(r^(t|~e),n,t,o,u,c)}
+        function i(n,t){var r,e,o,u,c;n[t>>5]|=128<<t%32,n[14+(t+64>>>9<<4)]=t;var f=1732584193,i=-271733879,a=-1732584194,h=271733878;for(r=0;r<n.length;r+=16)f=l(e=f,o=i,u=a,c=h,n[r],7,-680876936),h=l(h,f,i,a,n[r+1],12,-389564586),a=l(a,h,f,i,n[r+2],17,606105819),i=l(i,a,h,f,n[r+3],22,-1044525330),f=l(f,i,a,h,n[r+4],7,-176418897),h=l(h,f,i,a,n[r+5],12,1200080426),a=l(a,h,f,i,n[r+6],17,-1473231341),i=l(i,a,h,f,n[r+7],22,-45705983),f=l(f,i,a,h,n[r+8],7,1770035416),h=l(h,f,i,a,n[r+9],12,-1958414417),a=l(a,h,f,i,n[r+10],17,-42063),i=l(i,a,h,f,n[r+11],22,-1990404162),f=l(f,i,a,h,n[r+12],7,1804603682),h=l(h,f,i,a,n[r+13],12,-40341101),a=l(a,h,f,i,n[r+14],17,-1502002290),f=v(f,i=l(i,a,h,f,n[r+15],22,1236535329),a,h,n[r+1],5,-165796510),h=v(h,f,i,a,n[r+6],9,-1069501632),a=v(a,h,f,i,n[r+11],14,643717713),i=v(i,a,h,f,n[r],20,-373897302),f=v(f,i,a,h,n[r+5],5,-701558691),h=v(h,f,i,a,n[r+10],9,38016083),a=v(a,h,f,i,n[r+15],14,-660478335),i=v(i,a,h,f,n[r+4],20,-405537848),f=v(f,i,a,h,n[r+9],5,568446438),h=v(h,f,i,a,n[r+14],9,-1019803690),a=v(a,h,f,i,n[r+3],14,-187363961),i=v(i,a,h,f,n[r+8],20,1163531501),f=v(f,i,a,h,n[r+13],5,-1444681467),h=v(h,f,i,a,n[r+2],9,-51403784),a=v(a,h,f,i,n[r+7],14,1735328473),f=g(f,i=v(i,a,h,f,n[r+12],20,-1926607734),a,h,n[r+5],4,-378558),h=g(h,f,i,a,n[r+8],11,-2022574463),a=g(a,h,f,i,n[r+11],16,1839030562),i=g(i,a,h,f,n[r+14],23,-35309556),f=g(f,i,a,h,n[r+1],4,-1530992060),h=g(h,f,i,a,n[r+4],11,1272893353),a=g(a,h,f,i,n[r+7],16,-155497632),i=g(i,a,h,f,n[r+10],23,-1094730640),f=g(f,i,a,h,n[r+13],4,681279174),h=g(h,f,i,a,n[r],11,-358537222),a=g(a,h,f,i,n[r+3],16,-722521979),i=g(i,a,h,f,n[r+6],23,76029189),f=g(f,i,a,h,n[r+9],4,-640364487),h=g(h,f,i,a,n[r+12],11,-421815835),a=g(a,h,f,i,n[r+15],16,530742520),f=m(f,i=g(i,a,h,f,n[r+2],23,-995338651),a,h,n[r],6,-198630844),h=m(h,f,i,a,n[r+7],10,1126891415),a=m(a,h,f,i,n[r+14],15,-1416354905),i=m(i,a,h,f,n[r+5],21,-57434055),f=m(f,i,a,h,n[r+12],6,1700485571),h=m(h,f,i,a,n[r+3],10,-1894986606),a=m(a,h,f,i,n[r+10],15,-1051523),i=m(i,a,h,f,n[r+1],21,-2054922799),f=m(f,i,a,h,n[r+8],6,1873313359),h=m(h,f,i,a,n[r+15],10,-30611744),a=m(a,h,f,i,n[r+6],15,-1560198380),i=m(i,a,h,f,n[r+13],21,1309151649),f=m(f,i,a,h,n[r+4],6,-145523070),h=m(h,f,i,a,n[r+11],10,-1120210379),a=m(a,h,f,i,n[r+2],15,718787259),i=m(i,a,h,f,n[r+9],21,-343485551),f=d(f,e),i=d(i,o),a=d(a,u),h=d(h,c);return[f,i,a,h]}
+        function a(n){var t,r="",e=32*n.length;for(t=0;t<e;t+=8)r+=String.fromCharCode(n[t>>5]>>>t%32&255);return r}
+        function h(n){var t,r=[];for(r[(n.length>>2)-1]=void 0,t=0;t<r.length;t+=1)r[t]=0;var e=8*n.length;for(t=0;t<e;t+=8)r[t>>5]|=(255&n.charCodeAt(t/8))<<t%32;return r}
+        function e(n){var t,r,e="0123456789abcdef",o="";for(r=0;r<n.length;r+=1)t=n.charCodeAt(r),o+=e.charAt(t>>>4&15)+e.charAt(15&t);return o}
+        function r(n){return unescape(encodeURIComponent(n))}
+        function o(n){return a(i(h(t=r(n)),8*t.length));var t}
+        function u(n,t){return function(n,t){var r,e,o=h(n),u=[],c=[];for(u[15]=c[15]=void 0,16<o.length&&(o=i(o,8*n.length)),r=0;r<16;r+=1)u[r]=909522486^o[r],c[r]=1549556828^o[r];return e=i(u.concat(h(t)),512+8*t.length),a(i(c.concat(e),640))}(r(n),r(t))}
+        function t(n,t,r){return t?r?u(t,n):e(u(t,n)):r?o(n):e(o(n))}
+        "function"==typeof define&&define.amd?define(function(){return t}):"object"==typeof module&&module.exports?module.exports=t:n.md5=t;
+    }(this);
+</script>
+
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '6cf2cde57d26c85e2a02',
+    clientSecret: '6629c416c115113f97270a5a72a08b56a26b7aba',
+    repo: 'review',
+    owner: 'wzsyyh',
+    admin: ['wzsyyh'],
+    id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false       // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+            
+
+            
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">璞石园里朴实缘，Push_Y是璞石猿</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/wzsyyh" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+                <a href="https://twitter.com/NpXRBZRAcmuZ6RI" target="_blank">
+                    <i class="fab fa-twitter gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+                <a href="https://www.zhihu.com/people/yi-yi-qing-41" target="_blank">
+                    <i class="fab fa-zhihu gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+                <a href="https://www.facebook.com/profile.php?id=100029087942412" target="_blank">
+                    <i class="fab fa-facebook gt-c-content-color-first"></i>
+                </a>
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://github.com/wzsyyh/wzsyyh.github.io" target="_blank">wzsyyh</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://www.wzsyyh.ml/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
